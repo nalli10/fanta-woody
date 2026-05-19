@@ -494,6 +494,32 @@ details.miss[open] summary::before { transform: rotate(90deg); }
 }
 .miss-body .pill { background: #fff3cd; color: #8a6d00; }
 
+/* Incomplete lineups — streak-grouped (rules 6.1 / 6.4) */
+details.inc .miss-count { color: #b91c1c; background: #fee2e2; }
+.inc-badge {
+    font-size: 11px; font-weight: 600;
+    padding: 2px 9px; border-radius: 10px;
+}
+.inc-badge.sev2 { color: #92400e; background: #fef3c7; }
+.inc-badge.sev3 { color: #b91c1c; background: #fee2e2; }
+.inc-body {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+}
+.inc-streak { display: flex; flex-wrap: wrap; align-items: center; gap: 4px; }
+.inc-pills { display: flex; flex-wrap: wrap; gap: 4px; }
+.inc-run {
+    font-size: 11px; font-weight: 600;
+    padding: 1px 9px; border-radius: 8px; margin-left: 6px;
+}
+.inc-streak .pill.sev1 { background: #eef1f4; color: #52606d; }
+.inc-streak .pill.sev2 { background: #fef3c7; color: #92400e; }
+.inc-streak .pill.sev3 { background: #fee2e2; color: #b91c1c; }
+.inc-run.sev1 { background: #eef1f4; color: #52606d; }
+.inc-run.sev2 { background: #fef3c7; color: #92400e; }
+.inc-run.sev3 { background: #fee2e2; color: #b91c1c; }
+
 /* Head-to-Head picker */
 .h2h-picker {
     display: grid;
@@ -893,7 +919,7 @@ details.miss[open] summary::before { transform: rotate(90deg); }
   <div class="hdr">
     <h1>Fanta Woody</h1>
     <div class="sub">Season 2025-26</div>
-    <div class="freshness">Updated 2026-05-19 00:33</div>
+    <div class="freshness">Updated 2026-05-19 00:58</div>
   </div>
 
   <div class="tab-nav">
@@ -1337,6 +1363,64 @@ details.miss[open] summary::before { transform: rotate(90deg); }
   </summary>
   <div class="miss-body"><span class="pill">G9</span></div>
 </details></section>
+    <section>
+      <h2>🩹 Incomplete Lineups</h2>
+      <div class="section-note" style="font-size:13px;color:#6e6e73;margin:-6px 0 10px;">
+        Games where a team fielded fewer than 11 — it ran out of valid
+        same-role substitutes (goalie for goalie, defender for defender, and
+        so on), so a slot scored nothing (rule 6.1). Consecutive-game streaks
+        are broken out because rule 6.4 escalates with them. No points are
+        deducted — this is a tracking aid.
+      </div>
+      <details class="miss inc">
+  <summary>
+    <span class="miss-name">Donpicasso</span>
+    
+    <span class="miss-count"><b>3</b> incomplete</span>
+  </summary>
+  <div class="miss-body inc-body"><div class="inc-streak"><span class="inc-pills"><span class="pill sev1" title="Fielded 10 — 1 short">G4</span></span><span class="inc-run sev1">1 game</span></div><div class="inc-streak"><span class="inc-pills"><span class="pill sev1" title="Fielded 10 — 1 short">G11</span></span><span class="inc-run sev1">1 game</span></div><div class="inc-streak"><span class="inc-pills"><span class="pill sev1" title="Fielded 10 — 1 short">G26</span></span><span class="inc-run sev1">1 game</span></div></div>
+</details>
+<details class="miss inc">
+  <summary>
+    <span class="miss-name">Gangbangers Fc</span>
+    
+    <span class="miss-count"><b>3</b> incomplete</span>
+  </summary>
+  <div class="miss-body inc-body"><div class="inc-streak"><span class="inc-pills"><span class="pill sev1" title="Fielded 10 — 1 short">G6</span></span><span class="inc-run sev1">1 game</span></div><div class="inc-streak"><span class="inc-pills"><span class="pill sev1" title="Fielded 10 — 1 short">G34</span></span><span class="inc-run sev1">1 game</span></div><div class="inc-streak"><span class="inc-pills"><span class="pill sev1" title="Fielded 10 — 1 short">G36</span></span><span class="inc-run sev1">1 game</span></div></div>
+</details>
+<details class="miss inc">
+  <summary>
+    <span class="miss-name">Mussolini Fc</span>
+    
+    <span class="miss-count"><b>3</b> incomplete</span>
+  </summary>
+  <div class="miss-body inc-body"><div class="inc-streak"><span class="inc-pills"><span class="pill sev1" title="Fielded 10 — 1 short">G3</span></span><span class="inc-run sev1">1 game</span></div><div class="inc-streak"><span class="inc-pills"><span class="pill sev1" title="Fielded 10 — 1 short">G21</span></span><span class="inc-run sev1">1 game</span></div><div class="inc-streak"><span class="inc-pills"><span class="pill sev1" title="Fielded 10 — 1 short">G34</span></span><span class="inc-run sev1">1 game</span></div></div>
+</details>
+<details class="miss inc">
+  <summary>
+    <span class="miss-name">Glory Goals</span>
+    
+    <span class="miss-count"><b>2</b> incomplete</span>
+  </summary>
+  <div class="miss-body inc-body"><div class="inc-streak"><span class="inc-pills"><span class="pill sev1" title="Fielded 10 — 1 short">G4</span></span><span class="inc-run sev1">1 game</span></div><div class="inc-streak"><span class="inc-pills"><span class="pill sev1" title="Fielded 10 — 1 short">G31</span></span><span class="inc-run sev1">1 game</span></div></div>
+</details>
+<details class="miss inc">
+  <summary>
+    <span class="miss-name">BARTUGAL</span>
+    
+    <span class="miss-count"><b>1</b> incomplete</span>
+  </summary>
+  <div class="miss-body inc-body"><div class="inc-streak"><span class="inc-pills"><span class="pill sev1" title="Fielded 9 — 2 short">G13</span></span><span class="inc-run sev1">1 game</span></div></div>
+</details>
+<details class="miss inc">
+  <summary>
+    <span class="miss-name">Sticky Bandits</span>
+    
+    <span class="miss-count"><b>1</b> incomplete</span>
+  </summary>
+  <div class="miss-body inc-body"><div class="inc-streak"><span class="inc-pills"><span class="pill sev1" title="Fielded 10 — 1 short">G16</span></span><span class="inc-run sev1">1 game</span></div></div>
+</details>
+    </section>
     <section>
       <h2>🛡 Admin Interventions</h2>
       <div class="section-note" style="font-size:13px;color:#6e6e73;margin:-6px 0 10px;">
