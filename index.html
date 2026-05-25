@@ -262,6 +262,7 @@ details.squad[open] summary::before { transform: rotate(90deg); }
 /* Tab navigation */
 .tab-nav {
     display: flex;
+    flex-wrap: wrap;            /* let buttons drop to a 2nd row on mobile */
     gap: 4px;
     margin-bottom: 20px;
     background: white;
@@ -270,7 +271,7 @@ details.squad[open] summary::before { transform: rotate(90deg); }
     box-shadow: 0 1px 3px rgba(0,0,0,0.06);
 }
 .tab-nav button {
-    flex: 1;
+    flex: 1 1 auto;             /* take content width + share leftover space */
     padding: 10px 14px;
     border: none;
     background: transparent;
@@ -281,6 +282,7 @@ details.squad[open] summary::before { transform: rotate(90deg); }
     border-radius: 6px;
     transition: background 0.15s, color 0.15s;
     font-family: inherit;
+    white-space: nowrap;        /* keep each label on one line; the row wraps instead */
 }
 .tab-nav button:hover { background: #f4f6f8; color: #333; }
 .tab-nav button.active {
@@ -1010,7 +1012,7 @@ table.prize-tbl .prize-empty { color:#999; font-style:italic; }
   <div class="hdr">
     <h1>Fanta Woody</h1>
     <div class="sub">Season 2025-26</div>
-    <div class="freshness">Updated 2026-05-24 22:08</div>
+    <div class="freshness">Updated 2026-05-24 22:13</div>
   </div>
 
   <div class="tab-nav">
