@@ -661,6 +661,47 @@ details.inc .miss-count { color: #b91c1c; background: #fee2e2; }
 .win-amt { font-weight:700; color:#d4a017; white-space:nowrap; }
 </style>
 <style>
+.prizes-tab { display:flex; flex-direction:column; gap:18px; }
+.buy-in-hdr { background:#fff; border:1px solid #e0e0e0; border-radius:10px;
+              padding:14px 16px; display:flex; flex-wrap:wrap;
+              gap:6px 24px; align-items:baseline; }
+.bi-line { font-size:15px; }
+.bi-line b { color:#1a3a5c; font-size:18px; font-variant-numeric:tabular-nums; }
+.bi-label { color:#6e6e73; margin-right:6px; font-weight:600; }
+.bi-breakdown { margin-left:auto; font-size:14px; color:#444;
+                font-variant-numeric:tabular-nums; }
+.bi-breakdown b { color:#1a3a5c; }
+.bi-reserve { color:#b85a00; margin-left:6px; }
+.prize-note { background:#fff8e6; border:1px solid #f0d68a; border-radius:8px;
+              padding:10px 14px; font-size:14px; line-height:1.5;
+              display:flex; gap:10px; align-items:flex-start; }
+.prize-note .pn-icon { flex:none; font-size:18px; }
+.prize-note .pn-text { white-space:pre-wrap; }
+table.prize-tbl { width:100%; border-collapse:collapse; font-size:14px;
+                  background:#fff; }
+table.prize-tbl th, table.prize-tbl td { padding:8px 10px;
+                  border-bottom:1px solid #ececec; text-align:left;
+                  vertical-align:top; }
+table.prize-tbl th { background:#f4f6f8; font-weight:600; color:#1a3a5c;
+                     font-size:13px; }
+table.prize-tbl td.amt, table.prize-tbl th.amt { white-space:nowrap;
+                     font-variant-numeric:tabular-nums; }
+table.prize-tbl td.status { text-align:center; white-space:nowrap; }
+table.prize-tbl tr.last-row td { border-bottom:none; }
+table.prize-tbl .prize-empty { color:#999; font-style:italic; }
+.wk-leaders { display:flex; flex-direction:column; gap:2px; }
+.wk-leaders .wk-leader { display:flex; gap:8px; align-items:baseline; }
+.wk-leaders .wk-leader b { color:#1a3a5c; font-variant-numeric:tabular-nums; }
+.wk-leaders .wk-detail { color:#6e6e73; font-size:12px; }
+.wk-leaders details { margin-top:4px; }
+.wk-leaders details summary { cursor:pointer; color:#1a3a5c;
+              font-size:13px; font-weight:600; }
+.wk-leaders details[open] summary { margin-bottom:4px; }
+.prize-section-hdr { font-size:13px; color:#6e6e73; margin:0 0 6px;
+              font-weight:600; text-transform:uppercase;
+              letter-spacing:0.4px; }
+</style>
+<style>
 .rules-doc { font-size: 14px; line-height: 1.6; color: #2c2c2e;
              max-width: 780px; }
 .rules-doc h1 { font-size: 22px; margin: 0 0 16px; }
@@ -919,11 +960,12 @@ details.inc .miss-count { color: #b91c1c; background: #fee2e2; }
   <div class="hdr">
     <h1>Fanta Woody</h1>
     <div class="sub">Season 2025-26</div>
-    <div class="freshness">Updated 2026-05-22 01:10</div>
+    <div class="freshness">Updated 2026-05-24 20:50</div>
   </div>
 
   <div class="tab-nav">
     <button class="active" data-tab="overview">Overview</button>
+    <button data-tab="prizes">Prizes</button>
     <button data-tab="squads">Squads</button>
     <button data-tab="stats">Player Stats</button>
     <button data-tab="history">History</button>
@@ -1040,7 +1082,6 @@ details.inc .miss-count { color: #b91c1c; background: #fee2e2; }
 <div class="winner-card"><div class="slot"><div class="label">🥇 Winner</div><div class="team">T.F.C.O</div><div class="score">Final: 3-0</div></div><div class="slot"><div class="label">🥈 Runner-up</div><div class="team">Mussolini Fc</div></div></div>
 <h3>Champions</h3>
 <div class="winner-card"><div class="slot"><div class="label">🥇 Winner</div><div class="team">Mussolini Fc</div><div class="score">Final: 4-2</div></div><div class="slot"><div class="label">🥈 Runner-up</div><div class="team">Glory Goals</div></div></div></section>
-    <section><h2>💰 Winnings</h2><div class="potbar"><span>Total paid out: <b>$4800</b></span><span>🔒 secured · ⏳ provisional (final round pending)</span></div><div class="win-list"><div class="win-card top"><div class="win-hd"><span class="win-mgr">Spal</span><span class="win-team">Spal</span><span class="win-total">$2400 ⏳</span></div><div class="win-row"><span class="win-mark">🔒</span><span class="win-label">Scudetto — 1st</span><span class="win-detail">1st place · 66 pts</span><span class="win-amt">$2200</span></div><div class="win-row"><span class="win-mark">⏳</span><span class="win-label">Most sommas</span><span class="win-detail">2730.5 somma punti</span><span class="win-amt">$200</span></div></div><div class="win-card"><div class="win-hd"><span class="win-mgr">Dave Ragno</span><span class="win-team">T.F.C.O</span><span class="win-total">$900 ⏳</span></div><div class="win-row"><span class="win-mark">⏳</span><span class="win-label">Scudetto — 3rd</span><span class="win-detail">3rd place · 56 pts</span><span class="win-amt">$500</span></div><div class="win-row"><span class="win-mark">🔒</span><span class="win-label">Coppa Italia</span><span class="win-detail">def. Mussolini Fc 3-0</span><span class="win-amt">$400</span></div></div><div class="win-card"><div class="win-hd"><span class="win-mgr">Rob Pugz</span><span class="win-team">Gangbangers Fc</span><span class="win-total">$900 ⏳</span></div><div class="win-row"><span class="win-mark">⏳</span><span class="win-label">Scudetto — 2nd</span><span class="win-detail">2nd place · 57 pts</span><span class="win-amt">$900</span></div></div><div class="win-card"><div class="win-hd"><span class="win-mgr">Nalli</span><span class="win-team">Mussolini Fc</span><span class="win-total">$600 🔒</span></div><div class="win-row"><span class="win-mark">🔒</span><span class="win-label">Champions</span><span class="win-detail">def. Glory Goals 4-2</span><span class="win-amt">$600</span></div></div></div></section>
     <section><h2>🏅 Weekly Top Score</h2><div class="lb-grid"><div class="lb-card top nomoney"><div class="lb-team">BARTUGAL</div><div class="lb-prize">6</div><div class="lb-wins">weekly win(s)</div></div><div class="lb-card top nomoney"><div class="lb-team">Spal</div><div class="lb-prize">6</div><div class="lb-wins">weekly win(s)</div></div><div class="lb-card nomoney"><div class="lb-team">T.F.C.O</div><div class="lb-prize">5.5</div><div class="lb-wins">weekly win(s)</div></div><div class="lb-card nomoney"><div class="lb-team">Mussolini Fc</div><div class="lb-prize">5</div><div class="lb-wins">weekly win(s)</div></div><div class="lb-card nomoney"><div class="lb-team">Gangbangers Fc</div><div class="lb-prize">4</div><div class="lb-wins">weekly win(s)</div></div><div class="lb-card nomoney"><div class="lb-team">Glory Goals</div><div class="lb-prize">4</div><div class="lb-wins">weekly win(s)</div></div><div class="lb-card nomoney"><div class="lb-team">Donpicasso</div><div class="lb-prize">3.5</div><div class="lb-wins">weekly win(s)</div></div><div class="lb-card nomoney"><div class="lb-team">Sticky Bandits</div><div class="lb-prize">3</div><div class="lb-wins">weekly win(s)</div></div></div><div class="wk-list">
 <div class="wk-hdr">Week</div>
 <div class="wk-hdr">Winner(s)</div>
@@ -1498,6 +1539,10 @@ details.inc .miss-count { color: #b91c1c; background: #fee2e2; }
 </section>
   </div>
 
+  <div class="tab-content" id="tab-prizes">
+    <div class="prizes-tab"><div class="buy-in-hdr"><div class="bi-line"><span class="bi-label">Buy-in:</span><span class="bi-math">8 teams × $600 = <b>$4800</b> pool</span></div><div class="bi-breakdown"><span><b>$4800</b> in prizes</span></div></div><section><div class="prize-section-hdr">Current season — 2025-26</div><table class="prize-tbl"><thead><tr><th>Prize</th><th class="amt">Amount</th><th>Currently leading</th><th class="status">Status</th></tr></thead><tbody><tr><td>Scudetto — 1st</td><td class="amt"><b>$2200</b></td><td>Spal <span class="wk-detail">(Spal) · 1st place · 66 pts</span></td><td class="status">🔒</td></tr><tr><td>Scudetto — 2nd</td><td class="amt"><b>$900</b></td><td>Rob Pugz <span class="wk-detail">(Gangbangers Fc) · 2nd place · 57 pts</span></td><td class="status">⏳</td></tr><tr><td>Scudetto — 3rd</td><td class="amt"><b>$500</b></td><td>Dave Ragno <span class="wk-detail">(T.F.C.O) · 3rd place · 56 pts</span></td><td class="status">⏳</td></tr><tr><td>Champions</td><td class="amt"><b>$600</b></td><td>Nalli <span class="wk-detail">(Mussolini Fc) · def. Glory Goals 4-2</span></td><td class="status">🔒</td></tr><tr><td>Coppa Italia</td><td class="amt"><b>$400</b></td><td>Dave Ragno <span class="wk-detail">(T.F.C.O) · def. Mussolini Fc 3-0</span></td><td class="status">🔒</td></tr><tr><td>Most sommas</td><td class="amt"><b>$200</b></td><td>Spal <span class="wk-detail">(Spal) · 2730.5 somma punti</span></td><td class="status">⏳</td></tr></tbody></table></section><section><div class="prize-section-hdr">💰 Manager standings</div><div class="potbar"><span>Total paid out: <b>$4800</b></span><span>🔒 secured · ⏳ provisional (final round pending)</span></div><div class="win-list"><div class="win-card top"><div class="win-hd"><span class="win-mgr">Spal</span><span class="win-team">Spal</span><span class="win-total">$2400 ⏳</span></div><div class="win-row"><span class="win-mark">🔒</span><span class="win-label">Scudetto — 1st</span><span class="win-detail">1st place · 66 pts</span><span class="win-amt">$2200</span></div><div class="win-row"><span class="win-mark">⏳</span><span class="win-label">Most sommas</span><span class="win-detail">2730.5 somma punti</span><span class="win-amt">$200</span></div></div><div class="win-card"><div class="win-hd"><span class="win-mgr">Dave Ragno</span><span class="win-team">T.F.C.O</span><span class="win-total">$900 ⏳</span></div><div class="win-row"><span class="win-mark">⏳</span><span class="win-label">Scudetto — 3rd</span><span class="win-detail">3rd place · 56 pts</span><span class="win-amt">$500</span></div><div class="win-row"><span class="win-mark">🔒</span><span class="win-label">Coppa Italia</span><span class="win-detail">def. Mussolini Fc 3-0</span><span class="win-amt">$400</span></div></div><div class="win-card"><div class="win-hd"><span class="win-mgr">Rob Pugz</span><span class="win-team">Gangbangers Fc</span><span class="win-total">$900 ⏳</span></div><div class="win-row"><span class="win-mark">⏳</span><span class="win-label">Scudetto — 2nd</span><span class="win-detail">2nd place · 57 pts</span><span class="win-amt">$900</span></div></div><div class="win-card"><div class="win-hd"><span class="win-mgr">Nalli</span><span class="win-team">Mussolini Fc</span><span class="win-total">$600 🔒</span></div><div class="win-row"><span class="win-mark">🔒</span><span class="win-label">Champions</span><span class="win-detail">def. Glory Goals 4-2</span><span class="win-amt">$600</span></div></div></div></section><section><div class="prize-section-hdr">Last season — 2024-25</div><table class="prize-tbl"><thead><tr><th>Prize</th><th class="amt">Amount</th><th>Winner</th></tr></thead><tbody><tr><td>Scudetto — 1st</td><td class="amt"><b>$1400</b></td><td>Dave Ragno <span class="wk-detail">(Donald Trump)</span></td></tr><tr><td>Scudetto — 2nd</td><td class="amt"><b>$700</b></td><td>Spal <span class="wk-detail">(Spal)</span></td></tr><tr><td>Scudetto — 3rd</td><td class="amt"><b>$300</b></td><td>Rob Pugz <span class="wk-detail">(Gangbangers Fc)</span></td></tr></tbody></table></section></div>
+  </div>
+
   <div class="tab-content" id="tab-squads">
     <section><h2>📋 Squads</h2><details class="squad">
   <summary>
@@ -1657,28 +1702,7 @@ details.inc .miss-count { color: #b91c1c; background: #fee2e2; }
 <li>Entry Fee: $500 per team</li>
 </ul>
 <h2>2. Prize Structure</h2>
-<h3>2.1. Scudetto</h3>
-<ul>
-<li>1st Place: $1500</li>
-<li>2nd Place: $800</li>
-<li>3rd Place: $300</li>
-</ul>
-<h3>2.2. Champions League</h3>
-<ul>
-<li>1st Place: $500</li>
-</ul>
-<h3>2.3. Coppa Italia</h3>
-<ul>
-<li>1st Place: $300</li>
-</ul>
-<h3>2.4. Weekly Prizes</h3>
-<ul>
-<li>Total: $380</li>
-</ul>
-<h3>2.5. Most somma points</h3>
-<ul>
-<li>Total: $220</li>
-</ul>
+<p>Prize structure now lives on the <strong>Prizes</strong> tab of the league report — buy-in pool, payout breakdown per prize, who's currently leading each one, and last season's winners are all there. The admin (via the Telegram bot) is the source of truth for any change.</p>
 <h2>3. Point System</h2>
 <h3>3.1. Goals</h3>
 <table>
