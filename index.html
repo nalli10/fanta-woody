@@ -692,13 +692,19 @@ details.inc .miss-count { color: #b91c1c; background: #fee2e2; }
                  font-weight: 700; opacity: 0.85; }
 .th-tile-value { font-size: 22px; font-weight: 700; margin-top: 4px;
                  font-variant-numeric: tabular-nums; line-height: 1.15;
-                 white-space: nowrap; }
+                 /* Let long team names wrap; pure numbers ($4,000, 37/38,
+                    +5 pts) have no space-break points so they stay one
+                    line either way. break-word saves us from horrific
+                    overflow on long single-word team names. */
+                 overflow-wrap: break-word; word-break: break-word; }
 .th-tile.accent { background: rgba(255, 209, 102, 0.28);
                   border-color: rgba(255, 209, 102, 0.55); }
 .th-tile.accent .th-tile-value { color: #ffe8a8; }
 @media (max-width: 560px) {
     .th-headline { font-size: 34px; }
-    .th-tile { flex: 1 1 calc(50% - 5px); min-width: 0; }
+    .th-tile { flex: 1 1 calc(50% - 5px); min-width: 0; padding: 10px 12px; }
+    .th-tile-value { font-size: 17px; line-height: 1.2; }
+    .th-tile-label { font-size: 9px; letter-spacing: 1.2px; }
 }
 .prize-note { background:#fff8e6; border:1px solid #f0d68a; border-radius:8px;
               padding:10px 14px; font-size:14px; line-height:1.5;
@@ -988,7 +994,7 @@ table.prize-tbl .prize-empty { color:#999; font-style:italic; }
   <div class="hdr">
     <h1>Fanta Woody</h1>
     <div class="sub">Season 2025-26</div>
-    <div class="freshness">Updated 2026-05-24 21:40</div>
+    <div class="freshness">Updated 2026-05-24 21:50</div>
   </div>
 
   <div class="tab-nav">
